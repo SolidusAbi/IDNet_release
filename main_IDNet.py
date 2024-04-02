@@ -147,8 +147,6 @@ class IDNet(nn.Module):
                   nn.Linear(self.P, self.P),
                   nn.ReLU())
         self.fca_prior = nn.Linear(1, self.P)
-            
-            
         
         
     def UnrolledNetAlphas(self, y, M, K_iter=10):
@@ -162,9 +160,6 @@ class IDNet(nn.Module):
             alpha = torch.nn.functional.relu(alpha - llambda3[i]*llambda, inplace=False) # soft shrinkage and project to nonnegative orthant
         alpha_hat = alpha
         return alpha_hat
-    
-    
-    
     
     
     
@@ -265,6 +260,9 @@ class IDNet(nn.Module):
 
     
     def forward(self, x_data):
+        def device():
+            return next(self.parameters()).device
+        
         # x_data should have the supervised and semi-supervised part of the data (will be twiced)
         # it is a list, [unsup sup]
         # unsup is the bath_size * L pixels
@@ -273,18 +271,15 @@ class IDNet(nn.Module):
         # Get data -------------------------------
         batch_size = x_data[0].shape[0]
         
-        y_unsup = x_data[0].to(device) # batch * L
-        y_sup = x_data[1][0].to(device) # batch * L
-        M_sup = x_data[1][1].to(device)
-        a_sup = x_data[1][2].to(device)
-        
+        y_unsup = x_data[0].to(device()) # batch * L
+        y_sup = x_data[1][0].to(device()) # batch * L
+        M_sup = x_data[1][1].to(device())
+        a_sup = x_data[1][2].to(device())
                 
         # construct latent PDFs and some parameters ------------------
         a_prior_par = torch.ones(self.P,)
         p_a = td.Dirichlet(a_prior_par)
         sigma_noise_y = 0.01*torch.exp(self.fcy_std(torch.tensor([float(1)]))) # variance of the pixels noise (per band)
-        
-        
         
         # first unsupervised part --------------------------------------------
         K1 = self.K1

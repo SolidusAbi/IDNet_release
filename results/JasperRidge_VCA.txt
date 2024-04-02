@@ -1,0 +1,16 @@
+====> EPOCH: 1, Abundance NRMSE: 1.290113, Endmember NRMSE: 1.270987
+====> EPOCH: 2, Abundance NRMSE: 1.300131, Endmember NRMSE: 1.267312
+====> EPOCH: 3, Abundance NRMSE: 1.289113, Endmember NRMSE: 1.268840
+====> EPOCH: 4, Abundance NRMSE: 1.291094, Endmember NRMSE: 1.270484
+====> EPOCH: 5, Abundance NRMSE: 1.292055, Endmember NRMSE: 1.269097
+====> EPOCH: 6, Abundance NRMSE: 1.293055, Endmember NRMSE: 1.269696
+====> EPOCH: 7, Abundance NRMSE: 1.296655, Endmember NRMSE: 1.269002
+====> EPOCH: 8, Abundance NRMSE: 1.293363, Endmember NRMSE: 1.267424
+====> EPOCH: 9, Abundance NRMSE: 1.297437, Endmember NRMSE: 1.268774
+====> EPOCH: 10, Abundance NRMSE: 1.295839, Endmember NRMSE: 1.266358
+====> EPOCH: 11, Abundance NRMSE: 1.296273, Endmember NRMSE: 1.268347
+====> EPOCH: 12, Abundance NRMSE: 1.296654, Endmember NRMSE: 1.269327
+====> EPOCH: 13, Abundance NRMSE: 1.296918, Endmember NRMSE: 1.267900
+====> EPOCH: 14, Abundance NRMSE: 1.296236, Endmember NRMSE: 1.267340
+====> EPOCH: 15, Abundance NRMSE: 1.296116, Endmember NRMSE: 1.269836
+====> EPOCH: 16, Abundance NRMSE: 1.296171, Endmember NRMSE: 1.267371
